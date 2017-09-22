@@ -4,10 +4,10 @@
   package:
     name: "{{ item }}"
     state: present
-  with_items: "{{ packages_base }}"
+  with_items: "{{ common_packages_base }}"
 
 - name: Update packages
   package:
     name: '*'
     state: latest
-  when: packages_update
+  when: common_packages_update

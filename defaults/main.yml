@@ -2,8 +2,8 @@
 # Default: No
 #  This can lead to config drift when ran on hosts already provisioned/configured
 #  Use with caution
-packages_update: no
-packages_base:
+common_packages_update: no
+common_packages_base:
   - vim-minimal
   - git
   - wget
