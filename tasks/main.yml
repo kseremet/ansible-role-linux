@@ -1,0 +1,14 @@
+---
+- import_tasks: inventory_groups.yml
+
+- import_tasks: redhat_subscription.yml
+  when:
+    - ansible_os_family == 'RedHat'
+    - rhs_username is defined
+
+- import_tasks: yum_repos.yml
+  when:
+    - ansible_os_family == 'RedHat'
+    - rhs_username is undefined
+
+- import_tasks: packages.yml

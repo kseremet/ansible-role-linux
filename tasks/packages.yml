@@ -1,0 +1,13 @@
+
+---
+- name: Install baseline packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages_base }}"
+
+- name: Update packages
+  package:
+    name: '*'
+    state: latest
+  when: packages_update
