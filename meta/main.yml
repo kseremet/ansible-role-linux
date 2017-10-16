@@ -1,5 +1,6 @@
 ---
-dependencies: []
+dependencies:
+- { role: victorock.security }
 
 galaxy_info:
   author: victorock
