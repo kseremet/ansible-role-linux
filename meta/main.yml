@@ -1,7 +1,4 @@
 ---
-dependencies:
-- { role: victorock.security }
-
 galaxy_info:
   author: victorock
   description: Baseline OS - Linux
@@ -14,3 +11,7 @@ galaxy_info:
     - 7
   galaxy_tags:
     - general
+
+dependencies:
+# Security role is always applied to servers...
+  - role: victorock.security
