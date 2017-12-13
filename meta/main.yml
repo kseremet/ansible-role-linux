@@ -12,6 +12,4 @@ galaxy_info:
   galaxy_tags:
     - general
 
-dependencies:
-# Security role is always applied to servers...
-  - role: victorock.security
+dependencies: []
