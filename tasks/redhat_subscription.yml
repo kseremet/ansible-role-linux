@@ -2,9 +2,9 @@
 - name: Register to RHS
   redhat_subscription:
     state: present
-    username: "{{ rhs_username }}"
-    password: "{{ rhs_password }}"
+    username: "{{ linux_rhs_username }}"
+    password: "{{ linux_rhs_password }}"
     autosubscribe: true
   when:
-    - rhs_username is defined
-    - rhs_password is defined
+    - linux_rhs_username is defined
+    - linux_rhs_password is defined

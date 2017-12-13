@@ -1,0 +1,4 @@
+linux_packages:
+  - vim-minimal
+  - git
+  - wget
