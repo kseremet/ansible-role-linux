@@ -3,7 +3,7 @@ linux_packages:
   - git
   - wget
 
-linux_rhn_repos:
+linux_rhs_repos:
   - rhel-7-server-rpms
   - rhel-7-server-extras-rpms
   - rhel-7-server-rh-common-rpms
