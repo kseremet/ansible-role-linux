@@ -1,0 +1,8 @@
+---
+
+- include_tasks: "{{ ansible_os_family }}/rhs.yml"
+  when: linux_rhs|bool
+
+- include_tasks: "{{ ansible_os_family }}/package.yml"
+
+- include_tasks: "{{ ansible_os_family }}/system.yml"

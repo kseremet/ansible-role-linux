@@ -1,6 +1,0 @@
----
-- import_tasks: inventory_groups.yml
-
-- import_tasks: redhat.yml
-  when:
-    - ansible_os_family == 'RedHat'
