@@ -1,4 +1,6 @@
 ---
+- import_tasks: "defaults.yml"
+
 - import_tasks: "RedHat-7/rhs.yml"
   when: linux_rhs|bool
 
