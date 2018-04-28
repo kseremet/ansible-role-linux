@@ -3,9 +3,9 @@
     name: "{{ linux_repo.name }}"
     description: "{{ linux_repo.description }}"
     baseurl: "{{ linux_repo.baseurl }}"
-    gpgcheck: "{{ linux_repo.gpgcheck }}"
-    enabled: "{{ linux_repo.enabled }}"
-    state: "{{ linux_repo.state }}"
+    gpgcheck: "{{ linux_repo.gpgcheck | default(omit) }}"
+    enabled: "{{ linux_repo.enabled | default(omit) }}"
+    state: "{{ linux_repo.state | default(omit) }}"
   loop: "{{ linux_repos }}"
   loop_control:
     loop_var: linux_repo
