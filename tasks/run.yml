@@ -1,8 +1,8 @@
 ---
 - import_tasks: defaults.yml
 
-- name: "Process OS-specific"
-  include_vars: "{{ linux_var_file }}"
+- name: "Include OS-specific tasks"
+  include_tasks: "{{ linux_var_file }}"
   with_first_found:
     - files:
       - "{{ ansible_os_family }}.yml"
@@ -12,6 +12,6 @@
     label: "{{ linux_var_file }}"
   when: ansible_os_family != "RedHat"
 
-- name: Include OS-specific variables (RedHat).
-  include_vars: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+- name: Include OS-specific tasks (RedHat).
+  include_tasks: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
   when: ansible_os_family == "RedHat"

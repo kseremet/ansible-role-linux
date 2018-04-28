@@ -1,8 +1,9 @@
 ---
-
-- include_tasks: "{{ ansible_os_family }}/rhs.yml"
+- import_tasks: "RedHat-7/rhs.yml"
   when: linux_rhs|bool
 
-- include_tasks: "{{ ansible_os_family }}/package.yml"
+- import_tasks: "RedHat-7/package.yml"
+  when: linux_package|bool
 
-- include_tasks: "{{ ansible_os_family }}/system.yml"
+- import_tasks: "RedHat-7/system.yml"
+  when: linux_system|bool
