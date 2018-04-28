@@ -23,9 +23,8 @@ Playbook: Configure System
 ---
 - name: "Linux: Configure System"
   hosts: linux
-  connection: local
-  gather_facts: false
-  become: false
+  gather_facts: true
+  become: true
 
   tasks:
     - name: "victorock.linux"
