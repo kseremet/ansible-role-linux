@@ -1,7 +1,7 @@
 ---
 - include_tasks: defaults.yml
 
-- name: "Include OS-specific tasks"
+- name: "Include OS-specific tasks (!Red Hat)"
   include_tasks: "{{ linux_var_file }}"
   with_first_found:
     - files:
