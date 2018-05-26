@@ -12,6 +12,6 @@
     label: "{{ linux_var_file }}"
   when: ansible_os_family != "RedHat"
 
-- name: Include OS-specific tasks (RedHat).
+- name: "Include OS-specific tasks (RedHat)"
   include_tasks: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
   when: ansible_os_family == "RedHat"
