@@ -1,4 +1,6 @@
 ---
+- import_tasks: defaults.yml
+
 - name: "Include OS-specific tasks"
   include_tasks: "{{ linux_var_file }}"
   with_first_found:
