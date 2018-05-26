@@ -1,0 +1,14 @@
+- hosts: test
+  become: true
+
+  vars:
+    autorun: true
+    linux_additional_packages:
+      - "@Development Tools"
+
+  roles:
+    - role: test
+
+  tasks:
+    - include_role:
+        name: test
