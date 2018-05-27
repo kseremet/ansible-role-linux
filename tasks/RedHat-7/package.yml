@@ -8,5 +8,7 @@
   yum:
     name: '*'
     update_cache: yes
+    validate_certs: no
+    security: yes
     state: latest
   when: linux_update
