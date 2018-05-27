@@ -1,23 +1,12 @@
-- name: "Ensure state of repositories"
-  yum_repository:
-    name: "{{ linux_repo.name }}"
-    description: "{{ linux_repo.description }}"
-    baseurl: "{{ linux_repo.baseurl }}"
-    gpgcheck: "{{ linux_repo.gpgcheck | default(omit) }}"
-    enabled: "{{ linux_repo.enabled | default(omit) }}"
-    state: "{{ linux_repo.state | default(omit) }}"
-  loop: "{{ linux_repos + linux_additional_repos }}"
-  loop_control:
-    loop_var: linux_repo
-    label: "{{ linux_repo.name }}"
-
 - name: "yum: Install baseline packages"
   yum:
     name: "{{ linux_packages + linux_additional_packages }}"
+    update_cache: yes
     state: present
 
 - name: "yum: Update all packages"
   yum:
     name: '*'
+    update_cache: yes
     state: latest
   when: linux_update

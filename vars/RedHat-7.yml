@@ -3,13 +3,6 @@ linux_packages:
   - git
   - wget
 
-linux_repos:
-  - name: epel-repo
-    description: epel-repo
-    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-    gpgcheck: no
-    enabled: yes
-
 linux_rhs_repos:
   - rhel-7-server-rpms
   - rhel-7-server-extras-rpms
