@@ -2,6 +2,7 @@ linux_packages:
   - vim-minimal
   - git
   - wget
+  - htop
 
 linux_rhs_repos:
   - rhel-7-server-rpms
