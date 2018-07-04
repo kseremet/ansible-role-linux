@@ -1,5 +1,4 @@
 linux_packages:
-  - subscription-manager
   - vim-minimal
   - git
   - wget
