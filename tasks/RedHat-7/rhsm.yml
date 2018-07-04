@@ -1,5 +1,5 @@
 ---
-- name: "yum: Install baseline packages"
+- name: "Ensure state of subscription-manager"
   yum:
     name: "subscription-manager"
     update_cache: yes
