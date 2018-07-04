@@ -13,6 +13,4 @@ galaxy_info:
     - linux
     - common
 
-dependencies:
-  - role: geerlingguy.repo-epel
-    when: ansible_os_family == 'RedHat'
+dependencies: []

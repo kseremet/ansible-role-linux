@@ -7,11 +7,12 @@ linux_hostname - System Hostname (string)
 linux_update - Update (ALL) System Packages (bool)
 linux_packages - OS Specific packages (list)
 linux_repos - OS Specific repositories (list of hashes)
-linux_rhs - System Registration to RHS (bool)
-linux_rhs_repos - RHS Specific repositories (list)
-linux_rhs_org_id - RHS Specific organisation id (string)
-linux_rhs_activationkey - RHS Specific activation key (string)
-linux_rhs_autosubscribe - RHS Specific autosubscribe (bool)
+linux_rhsm - System Registration to RHS (bool)
+linux_rhsm_repos - RHS Specific repositories (list)
+linux_rhsm_org_id - RHS Specific organisation id (string)
+linux_rhsm_activationkey - RHS Specific activation key (string)
+linux_rhsm_autosubscribe - RHS Specific autosubscribe (bool)
+linux_rhsm_pools - RHS Specific pools to subscribe (list, empty list to unsubscribe)
 
 ```
 

@@ -7,12 +7,13 @@
     org_id: "{{ linux_rhsm_org_id | default(omit) }}"
     state: "{{ linux_rhsm_state | default(omit) }}"
     autosubscribe: "{{ linux_rhsm_autosubscribe | default(omit) }}"
+    pool_ids: "{{ linux_rhsm_pools | default(omit) }}"
     consumer_name: "{{ linux_rhsm_consumer_hostname | default(omit) }}"
 
 - name: "Ensure state of repository"
   rhsm_repository:
-    name: "{{ linux_rhs_repo.name  | default(linux_rhs_repo) }}"
-    state: "{{ linux_rhs_repo.state | default('present') }}"
-  with_items: "{{ linux_rhs_repos + linux_additional_rhs_repos }}"
+    name: "{{ linux_rhsm_repo.name  | default(linux_rhsm_repo) }}"
+    state: "{{ linux_rhsm_repo.state | default('present') }}"
+  with_items: "{{ linux_rhsm_repos + linux_additional_rhsm_repos }}"
   loop_control:
-    loop_var: linux_rhs_repo
+    loop_var: linux_rhsm_repo

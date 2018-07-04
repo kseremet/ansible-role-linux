@@ -1,6 +1,6 @@
 ---
-- include_tasks: "RedHat-7/rhs.yml"
-  when: linux_rhs|bool
+- include_tasks: "RedHat-7/rhsm.yml"
+  when: linux_rhsm|bool
 
 - include_tasks: "RedHat-7/package.yml"
   when: linux_package|bool

@@ -1,12 +1,10 @@
 linux_packages:
-# TODO: Create role for elrepo
-  - http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
   - vim-minimal
   - git
   - wget
   - htop
 
-linux_rhs_repos:
+linux_rhsm_repos:
   - rhel-7-server-rpms
   - rhel-7-server-extras-rpms
   - rhel-7-server-rh-common-rpms
