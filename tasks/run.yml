@@ -1,5 +1,7 @@
 ---
-- name: "Include OS-specific tasks"
+- include_tasks: defaults.yml
+
+- name: "Include OS-specific tasks (!Red Hat)"
   include_tasks: "{{ linux_var_file }}"
   with_first_found:
     - files:
@@ -10,6 +12,6 @@
     label: "{{ linux_var_file }}"
   when: ansible_os_family != "RedHat"
 
-- name: Include OS-specific tasks (RedHat).
+- name: "Include OS-specific tasks (RedHat)"
   include_tasks: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
   when: ansible_os_family == "RedHat"
