@@ -1,5 +1,5 @@
 linux_packages:
-  - http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+# TODO: Create role for elrepo
   - http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
   - vim-minimal
   - git
