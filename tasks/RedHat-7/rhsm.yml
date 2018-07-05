@@ -19,7 +19,7 @@
 - name: "Ensure state of repository"
   rhsm_repository:
     name: "{{ linux_rhsm_repo.name  | default(linux_rhsm_repo) }}"
-    state: "{{ linux_rhsm_repo.state | default('present') }}"
+    state: "{{ linux_rhsm_repo.state | default(omit) }}"
   with_items: "{{ linux_rhsm_repos + linux_additional_rhsm_repos }}"
   loop_control:
     loop_var: linux_rhsm_repo
