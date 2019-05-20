@@ -8,3 +8,4 @@ linux_additional_packages:    []
 linux_additional_repos:       []
 linux_additional_rhs_repos:   []
 linux_sebooleans:             []
+linux_firewall:               no
