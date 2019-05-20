@@ -7,3 +7,11 @@
     path: /etc/hosts
     regexp: '^{{ ansible_default_ipv4.address }}'
     line: '{{ ansible_default_ipv4.address }} {{ linux_hostname }} {{ inventory_hostname }} # Added by Ansible'
+    
+- name: "Ensure firewalld is disabled"
+  service:
+    name: httpd
+    state: stopped
+    enabled: no
+  when: not linux_firewall
+
