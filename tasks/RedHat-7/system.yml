@@ -10,7 +10,7 @@
     
 - name: "Ensure firewalld is disabled"
   service:
-    name: httpd
+    name: firewalld
     state: stopped
     enabled: no
   when: not linux_firewall
